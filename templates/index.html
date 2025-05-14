@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Todos los Posts</h2>
+{% for post in posts %}
+    <div>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content }}</p>
+        <small>Autor: {{ post.user_id }} | Fecha: {{ post.created_at.strftime('%Y-%m-%d') }}</small>
+        <hr>
+    </div>
+{% endfor %}
+{% endblock %}
